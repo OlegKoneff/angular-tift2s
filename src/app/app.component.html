@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div *ngIf="!showSeondInput" style="color:red">
+<label>First input</label>
+<input type="text" (focus)="inputFocus($event)">
+</div>
+<div *ngIf="showSeondInput" style="color:green">
+<label>Second input</label>
+<input (input)="inputEvent($event)" #mainInput type="text">
+</div>
+
+<button (click)="clearEvent()">Clear</button>
